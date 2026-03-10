@@ -1,0 +1,25 @@
+button {
+  width: 140px;
+  height: 40px;
+  margin: 30px 5px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+
+  color: black;
+  background-color: #f7f7f9;
+  transition: 1s;
+  border: none;
+}
+button:hover {
+  color: #f5f5f7;
+  background-color: #b1b1e3;;
+  transition: 1s;
+
+}
+
+.calc-btn{
+  background-color: #f73a21c5;
+}
+.calc-btn:hover{
+  background-color: #991100;
+}

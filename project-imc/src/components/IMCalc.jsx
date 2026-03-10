@@ -1,4 +1,7 @@
+import { useState, useEffect } from 'react'
 import '../assets/IMCalc.css'
+import MyButton from './Button.jsx'
+import Footer from './Footer.jsx'
 
 const IMCalc = () => {
   return (
@@ -17,12 +20,14 @@ const IMCalc = () => {
             </div>
           </div>
           <div className="form-controls">
-            <button className="form-control">Calcular</button>
-            <button className="form-control">Resetar</button>
+            <MyButton id="calc-btn" content="Calcular"/>
+            <MyButton id="clear-btn" content="Resetar"/>
           </div>
         
         </form>
       </section>
+
+      <Footer/>
       
     </>
   )
