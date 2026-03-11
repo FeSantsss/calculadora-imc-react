@@ -13,6 +13,8 @@ const IMCalc = () => {
     setWeight("");
   }
 
+
+
   console.log(height)
 
   return (
@@ -28,7 +30,7 @@ const IMCalc = () => {
                 name="height"
                 value={height}
                 id="height"
-                placeholder="Digite sua altura"
+                placeholder="Digite sua altura. Ex: 1.80"
                 onChange={(e) => setHeight(e.target.value)}
               />
             </div>
@@ -39,7 +41,7 @@ const IMCalc = () => {
                 name="weight"
                 value={weight}
                 id="weight"
-                placeholder="Digite seu peso"
+                placeholder="Digite seu peso. Ex: 70"
                 onChange={(e) => setWeight(e.target.value)}
               />
             </div>
