@@ -13,7 +13,18 @@ const IMCalc = () => {
     setWeight("");
   }
 
+  const validDigits = (text) => {
+    return text.replace(/[^0-9.]/g, "");
+  }
 
+  const handleHeightChange = (e) => {
+    const verifiedValue = validDigits(e.target.value);
+    setHeight(verifiedValue);
+  }
+  const handleWeightChange = (e) => {
+    const verifiedValue = validDigits(e.target.value);
+    setWeight(verifiedValue);
+  }
 
   console.log(height)
 
@@ -24,31 +35,31 @@ const IMCalc = () => {
         <form>
           <div className="forms-inputs">
             <div className="form-control">
-              <label htmlFor="height">Altura:</label>
+              <label htmlFor="height">Height:</label>
               <input
                 type="number"
                 name="height"
                 value={height}
                 id="height"
-                placeholder="Digite sua altura. Ex: 1.80"
-                onChange={(e) => setHeight(e.target.value)}
+                placeholder="Enter your height. Ex: 1.80"
+                onChange={(e) => handleHeightChange(e)}
               />
             </div>
             <div className="form-control">
-              <label htmlFor="weight">Peso:</label>
+              <label htmlFor="weight">Weight:</label>
               <input
                 type="number"
                 name="weight"
                 value={weight}
                 id="weight"
-                placeholder="Digite seu peso. Ex: 70"
-                onChange={(e) => setWeight(e.target.value)}
+                placeholder="Enter your weight. Ex: 70"
+                onChange={(e) => handleWeightChange(e)}
               />
             </div>
           </div>
           <div className="form-controls">
-            <MyButton id="calc-btn" content="CALCULAR"/>
-            <MyButton id="clear-btn" content="RESETAR" action={reset}/>
+            <MyButton id="calc-btn" content="CALCULATE"/>
+            <MyButton id="clear-btn" content="RESET" action={reset}/>
           </div>
         </form>
       </section>
