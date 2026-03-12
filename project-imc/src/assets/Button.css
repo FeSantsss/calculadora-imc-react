@@ -2,7 +2,7 @@ button {
   width: 140px;
   height: 40px;
   margin: 30px 5px 20px;
-  border-radius: 15px;
+  border-radius: 8px;
   cursor: pointer;
   font-family: "Sora", sans-serif;
   
@@ -23,5 +23,11 @@ button:hover {
   background-color: #f73a21c5;
 }
 .calc-btn:hover{
+  background-color: #991100;
+}
+.back-btn{
+  background-color: #f73a21c5;
+}
+.back-btn:hover{
   background-color: #991100;
 }
