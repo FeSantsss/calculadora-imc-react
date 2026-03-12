@@ -3,7 +3,7 @@ import "../assets/IMCalc.css";
 import MyButton from "./Button.jsx";
 import Footer from "./Footer.jsx";
 
-const IMCalc = () => {
+const IMCalc = ({calcImc}) => {
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
 
@@ -26,7 +26,6 @@ const IMCalc = () => {
     setWeight(verifiedValue);
   }
 
-  console.log(height)
 
   return (
     <>
@@ -58,7 +57,7 @@ const IMCalc = () => {
             </div>
           </div>
           <div className="form-controls">
-            <MyButton id="calc-btn" content="CALCULATE"/>
+            <MyButton id="calc-btn" content="CALCULATE" action={(e) => calcImc(e, height, weight)}/>
             <MyButton id="clear-btn" content="RESET" action={reset}/>
           </div>
         </form>
