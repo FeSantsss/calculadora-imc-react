@@ -46,3 +46,12 @@ label {
   text-align: start;
 }
 
+@media(max-width: 450px){
+  .container{
+    width: 45vh;
+  }
+  h1{
+      padding: 0 45px 10px 45px;
+
+  }
+}
